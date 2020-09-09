@@ -1,18 +1,19 @@
 package main
 
 import (
-    "fmt"
-    "handlers/handlers"
     "net/http"
-    // "io/ioutil"
+    "fmt"
+    "log"
+    "io/ioutil"
+    "os"
+    "github.com/sergiubcn/golang-demo/handlers"
 )
 func main() {
-    test := "srg"
-    users := handlers.NewUsers(test)
-    usersHandler = handlers.NewUsers()
+    l := log.New(os.Stdout, "product-api", log.LstdFlags)
+    hh := handlers.NewHello(l)
 
     sm := http.NewServeMux()
-    sm.handle("/users", usersHandler)
+    sm.Handle("/", hh)
 
-    http.ListenAndServe(":9090", sm)
+    http.ListenAndServe(":9090", nil)
 }
