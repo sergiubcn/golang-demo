@@ -1,11 +1,11 @@
 # Ignore executables
-**/*.exe
+golang-demo
 
 # Git
-./.git
+/.git
 
 # Packages
-./pkg/
+/pkg/
 
 #Source
-./src/
+/src/
