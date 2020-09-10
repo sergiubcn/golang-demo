@@ -1,0 +1,11 @@
+# Ignore executables
+**/*.exe
+
+# Git
+./.git
+
+# Packages
+./pkg/
+
+#Source
+./src/
