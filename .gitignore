@@ -7,5 +7,8 @@ golang-demo
 # Packages
 /pkg/
 
-#Source
+# Source
 /src/
+
+# Artefacts
+/bin
